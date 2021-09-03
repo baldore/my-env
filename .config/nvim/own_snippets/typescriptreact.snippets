@@ -27,3 +27,15 @@ function ${1:Component}(): JSX.Element {
 
 export default $1
 endsnippet
+
+snippet useeff "useEffect"
+useEffect(() => {
+	$1
+}, [$0])
+endsnippet
+
+snippet usecall "useCallback"
+const $1 = useCallback(($2) => {
+	$3
+}, [$4])
+endsnippet

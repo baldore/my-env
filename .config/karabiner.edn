@@ -67,7 +67,7 @@
          :rules [:launch-mode
                  [:f [:open "/Applications/Brave Browser.app"]]
                  [:t [:open "/Applications/Alacritty.app"]]
-                 [:e [:open "/nix/store/2lzmvd5clkcxa4ddzkc8p85v7kq7vhg6-emacsGccDarwin/Applications/Emacs.app"]]
+                 [:d [:open "/nix/store/2lzmvd5clkcxa4ddzkc8p85v7kq7vhg6-emacsGccDarwin/Applications/Emacs.app"]]
                  [:s [:open "/Applications/Slack.app"]]
                  [:a [:open "/Applications/Mattermost.app"]]
                  ]}

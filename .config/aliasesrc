@@ -1,8 +1,8 @@
 #!/bin/bash
-alias ls='lsd'
+alias ls='lsd -a'
 alias tree='lsd --tree -I node_modules'
 alias c='clear'
-alias cs='cht.sh'
+alias cht='cht.sh'
 
 # Easy zsh config
 alias ze="v ~/.zshrc"
@@ -27,6 +27,7 @@ alias dn="docker network"
 alias di="docker image"
 alias dv="docker volume"
 alias dco="docker-compose"
+alias ldo='lazydocker'
 
 # Config
 alias conf='lg --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -59,7 +60,7 @@ function git_current_branch() {
     [[ $ret == 128 ]] && return  # no git repo.
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
   fi
-  echo ${ref#refs/heads/}
+  echo "${ref#refs/heads/}"
 }
 
 function current_branch() {
@@ -85,4 +86,8 @@ function ggp() {
   fi
 }
 compdef _git ggp=git-checkout
+
+# Arc aliases
+alias adh='arc diff HEAD^1'
+alias grc='git rebase --continue'
 
